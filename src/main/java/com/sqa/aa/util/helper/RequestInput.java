@@ -41,7 +41,7 @@ public class RequestInput {
 			// and add element
 			newStringArray = Arrays.copyOf(elements, elements.length + 1);
 			// Set the last element to supplied String addString
-			newStringArray[elements.length + 1] = addString;
+			newStringArray[elements.length] = addString;
 
 		} else {
 
@@ -52,7 +52,7 @@ public class RequestInput {
 
 		}
 
-		return elements;
+		return newStringArray;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class RequestInput {
 		while (true) {
 			try {
 				// Ask the user a question to get relative input
-				System.out.print(question + " (Yes/Y) or (No/N):");
+				System.out.print(question);
 				// Set the input based on what the user enters on their keyboard
 				input = scanner.nextLine();
 				// Check that the input String is one character long
